@@ -1,0 +1,15 @@
+<map id="CRenderer::drawFlatElements" name="CRenderer::drawFlatElements">
+<area shape="rect" id="Node000001" title="Draws flat elements and UI text on the screen." alt="" coords="5,136,225,164"/>
+<area shape="rect" id="Node000002" href="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3" title="Gets the list of facets in the model." alt="" coords="303,5,446,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,133,191,89,230,65,272,43,292,36,294,40,274,48,233,69,194,94,135,138"/>
+<area shape="rect" id="Node000003" href="$class_c_model.html#a2e40f635ec3da42e043f6920d406ebb5" title="Gets the name of the model." alt="" coords="287,57,462,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,133,272,95,301,87,302,92,273,100,158,138"/>
+<area shape="rect" id="Node000004" href="$class_c_text_output.html#a5793d3881c781ae51ef85a639564b464" title="Prints a line of text to the screen." alt="" coords="296,109,453,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,136,281,130,281,135,225,141"/>
+<area shape="rect" id="Node000005" href="$class_c_text_output.html#a7d5231109e9f4d8faf30c75bdef86bfb" title="Sets the cursor position for text output." alt="" coords="273,161,476,189"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="225,158,257,161,257,166,225,163"/>
+<area shape="rect" id="Node000006" href="$class_c_text_output.html#a56798d58aa4a5f1b64f48307d7c59832" title="Sets the font for text output." alt="" coords="294,213,455,241"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="159,162,273,198,303,206,301,211,272,203,158,167"/>
+<area shape="rect" id="Node000007" href="$class_c_text_output.html#a6fbeca5c7e350193fc26afb290911634" title="Sets the spacing between characters." alt="" coords="282,265,467,293"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="136,162,195,205,233,229,274,250,294,258,292,263,272,255,231,234,192,210,132,166"/>
+</map>

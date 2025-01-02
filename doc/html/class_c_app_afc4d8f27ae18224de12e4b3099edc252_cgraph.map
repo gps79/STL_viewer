@@ -1,0 +1,6 @@
+<map id="CApp::operator=" name="CApp::operator=">
+<area shape="rect" id="Node000001" title="Deleted assignment operator to prevent assigning the singleton instance." alt="" coords="5,29,134,57"/>
+<area shape="rect" id="Node000002" href="$class_c_app.html#a37efd95335c10617806a48627dd882ac" title="Deleted copy constructor to prevent copying of the singleton instance." alt="" coords="182,29,283,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,41,166,41,166,46,134,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="204,30,199,20,203,11,214,5,232,3,252,5,262,12,260,16,250,10,232,8,216,10,207,15,204,20,208,28"/>
+</map>

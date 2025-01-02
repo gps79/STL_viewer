@@ -1,0 +1,19 @@
+<map id="CStlLoader::loadAscii" name="CStlLoader::loadAscii">
+<area shape="rect" id="Node000001" title="Loads an ASCII STL file." alt="" coords="5,88,166,116"/>
+<area shape="rect" id="Node000002" href="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3" title="Gets the list of facets in the model." alt="" coords="234,5,377,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,85,213,43,236,35,238,40,215,48,118,90"/>
+<area shape="rect" id="Node000003" href="$class_c_model.html#a7928937a1a8bfda19e66e862f6ef7003" title="Sets the name of the model." alt="" coords="218,57,393,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,88,202,83,203,88,166,93"/>
+<area shape="rect" id="Node000004" href="$class_c_stl_loader.html#a9213a5a4e9a059b7895bc544ec846a56" title="Reads the triangle data from a facet in the ASCII STL file." alt="" coords="214,109,397,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,110,199,114,198,120,165,115"/>
+<area shape="rect" id="Node000007" href="$common_8h.html#a95169468f308e9c662db968dd9a7833d" title="Converts a container of characters to lowercase." alt="" coords="742,117,838,145"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="109,114,156,141,185,154,214,163,334,185,383,189,429,189,526,179,648,163,727,147,728,152,649,168,526,185,430,194,383,194,334,191,213,168,183,159,153,146,106,119"/>
+<area shape="rect" id="Node000005" href="$class_c_stl_loader.html#abafc62a639fa04da0a423999d9f92b20" title="Reads a vertex from an ASCII STL file." alt="" coords="445,57,648,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="397,106,472,87,474,92,398,111"/>
+<area shape="rect" id="Node000008" href="$class_c_stl_loader.html#a37888f565ddb56db5dbb688dae066832" title="Reads a line from the ASCII STL file and checks for expected content." alt="" coords="455,109,638,154"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="398,129,440,129,440,134,398,134"/>
+<area shape="rect" id="Node000006" href="$class_c_stl_loader.html#a62363527d7de7db3cbc28f09850c43ae" title="Converts a string to a floating&#45;point number." alt="" coords="696,57,884,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="649,69,680,69,680,74,649,74"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="606,83,728,113,726,118,605,88"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="639,129,727,129,727,134,639,134"/>
+</map>

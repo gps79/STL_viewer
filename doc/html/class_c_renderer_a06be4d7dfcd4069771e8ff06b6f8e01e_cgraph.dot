@@ -1,0 +1,28 @@
+digraph "CRenderer::redrawWindow"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CRenderer::redrawWindow",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Draws the scene in the application window."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CRenderer::clearScreen",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_renderer.html#aca31ac0bcfc15cd2c2ef65e24c889563",tooltip="Clears the screen with a specified color."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="CRenderer::drawFlatElements",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_renderer.html#a775c61c15d23ed12551042329b0321d0",tooltip="Draws flat elements and UI text on the screen."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="CModel::getFacets",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3",tooltip="Gets the list of facets in the model."];
+  Node3 -> Node5 [id="edge4_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="CModel::getModelName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#a2e40f635ec3da42e043f6920d406ebb5",tooltip="Gets the name of the model."];
+  Node3 -> Node6 [id="edge5_Node000003_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="CTextOutput::printLn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_text_output.html#a5793d3881c781ae51ef85a639564b464",tooltip="Prints a line of text to the screen."];
+  Node3 -> Node7 [id="edge6_Node000003_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="CTextOutput::setCursorPos",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_text_output.html#a7d5231109e9f4d8faf30c75bdef86bfb",tooltip="Sets the cursor position for text output."];
+  Node3 -> Node8 [id="edge7_Node000003_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="CTextOutput::setFont",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_text_output.html#a56798d58aa4a5f1b64f48307d7c59832",tooltip="Sets the font for text output."];
+  Node3 -> Node9 [id="edge8_Node000003_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="CTextOutput::setSpacing",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_text_output.html#a6fbeca5c7e350193fc26afb290911634",tooltip="Sets the spacing between characters."];
+  Node1 -> Node10 [id="edge9_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="CRenderer::drawObject",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_renderer.html#a921ff864570efe3bd66719aaa8ba9a89",tooltip="Draws the 3D object in the current rendering context."];
+  Node10 -> Node4 [id="edge10_Node000010_Node000004",color="steelblue1",style="solid",tooltip=" "];
+}

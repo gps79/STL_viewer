@@ -1,0 +1,5 @@
+<map id="CStlLoader::isStlFileAsciiFormat" name="CStlLoader::isStlFileAsciiFormat">
+<area shape="rect" id="Node000001" title="Checks if the given STL file is in ASCII format." alt="" coords="5,5,190,50"/>
+<area shape="rect" id="Node000002" href="$common_8h.html#a95169468f308e9c662db968dd9a7833d" title="Converts a container of characters to lowercase." alt="" coords="238,14,333,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,25,222,25,222,30,190,30"/>
+</map>

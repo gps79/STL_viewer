@@ -1,0 +1,19 @@
+<map id="CApp::run" name="CApp::run">
+<area shape="rect" id="Node000001" title="Runs the main application loop." alt="" coords="5,188,92,216"/>
+<area shape="rect" id="Node000002" href="$class_c_app.html#af1b1a8bcaa38d4166f663910797048d8" title="Gets the current window focus state." alt="" coords="156,5,336,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,187,62,157,79,118,105,78,138,44,147,38,150,42,141,48,109,81,84,121,67,159,56,189"/>
+<area shape="rect" id="Node000003" href="$class_c_app.html#a8f4dec891f0da13a601b1e2816312957" title="Handles the event when the left mouse button (LMB) is pressed." alt="" coords="150,57,342,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,186,88,141,111,117,138,96,151,89,153,94,141,100,115,120,92,145,60,189"/>
+<area shape="rect" id="Node000004" href="$class_c_app.html#ab8cd373ba09765a9f4b00127c76eb476" title="Handles the event when the left mouse button (LMB) is released." alt="" coords="146,109,346,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="69,185,101,166,139,147,161,139,163,144,141,152,104,170,72,190"/>
+<area shape="rect" id="Node000005" href="$class_c_app.html#a829802e39c35868cf9a59d036d2d6713" title="Handles the event when the middle mouse button (MMB) is pressed." alt="" coords="148,161,344,189"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="92,193,132,188,133,193,92,199"/>
+<area shape="rect" id="Node000006" href="$class_c_app.html#a856769ddd20fa0daa09aa2d108aafc9e" title="Handles the event when the middle mouse button (MMB) is released." alt="" coords="145,213,347,241"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="92,205,129,210,129,215,92,210"/>
+<area shape="rect" id="Node000007" href="$class_c_app.html#a53f6c798ef189eeed86449c4071c2740" title="Handles the event when the right mouse button (RMB) is pressed." alt="" coords="148,265,344,293"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="73,214,104,233,141,250,163,258,161,263,139,255,102,237,70,219"/>
+<area shape="rect" id="Node000008" href="$class_c_app.html#a934f23230d46c374f71def9f82af5dca" title="Handles the event when the right mouse button (RMB) is released." alt="" coords="145,317,347,345"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="60,215,92,259,115,282,141,302,153,309,151,313,138,307,111,286,88,262,56,218"/>
+<area shape="rect" id="Node000009" href="$class_c_app.html#a8e20d0c304a861b1342a65c6e6c0004f" title="Updates the message queue for processing." alt="" coords="140,369,352,397"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="56,215,67,245,84,282,109,321,141,354,150,360,147,364,138,359,105,325,80,285,62,247,51,217"/>
+</map>

@@ -1,0 +1,13 @@
+digraph "CStlLoader::readAsciiVertex"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CStlLoader::readAsciiVertex",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Reads a vertex from an ASCII STL file."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CStlLoader::stringToFloat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a62363527d7de7db3cbc28f09850c43ae",tooltip="Converts a string to a floating-point number."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="strToLower",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$common_8h.html#a95169468f308e9c662db968dd9a7833d",tooltip="Converts a container of characters to lowercase."];
+}

@@ -1,0 +1,5 @@
+<map id="C3DFacet" name="C3DFacet">
+<area shape="rect" id="Node000001" title="Represents a 3D facet (triangle) in 3D space." alt="" coords="38,251,118,320"/>
+<area shape="rect" id="Node000002" href="$class_c_vector3d.html" title="Represents a 3D vector in space." alt="" coords="5,5,151,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,135,81,234,75,234,75,135"/>
+</map>

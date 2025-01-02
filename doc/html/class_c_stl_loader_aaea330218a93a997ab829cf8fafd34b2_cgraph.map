@@ -1,0 +1,7 @@
+<map id="CStlLoader::loadBinary" name="CStlLoader::loadBinary">
+<area shape="rect" id="Node000001" title="Loads a binary STL file." alt="" coords="5,32,176,60"/>
+<area shape="rect" id="Node000002" href="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3" title="Gets the list of facets in the model." alt="" coords="240,5,383,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,33,224,27,225,32,177,38"/>
+<area shape="rect" id="Node000003" href="$class_c_model.html#a7928937a1a8bfda19e66e862f6ef7003" title="Sets the name of the model." alt="" coords="224,57,399,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,53,209,57,208,62,176,58"/>
+</map>

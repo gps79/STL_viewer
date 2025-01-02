@@ -1,0 +1,7 @@
+<map id="CStlLoader::readAsciiVertex" name="CStlLoader::readAsciiVertex">
+<area shape="rect" id="Node000001" title="Reads a vertex from an ASCII STL file." alt="" coords="5,32,209,60"/>
+<area shape="rect" id="Node000002" href="$class_c_stl_loader.html#a62363527d7de7db3cbc28f09850c43ae" title="Converts a string to a floating&#45;point number." alt="" coords="257,5,444,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,32,241,28,241,34,209,37"/>
+<area shape="rect" id="Node000003" href="$common_8h.html#a95169468f308e9c662db968dd9a7833d" title="Converts a container of characters to lowercase." alt="" coords="303,57,398,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,54,288,62,287,67,209,59"/>
+</map>

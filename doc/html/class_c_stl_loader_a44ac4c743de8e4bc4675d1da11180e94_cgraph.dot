@@ -1,0 +1,45 @@
+digraph "CStlLoader::loadFile"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CStlLoader::loadFile",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Loads a 3D model from a specified STL file."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CStlLoader::allocateMemory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a918c9e59fcac2ad185f4255c51c4c2fe",tooltip="Allocates memory for the model based on the triangle count."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="CModel::getFacets",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3",tooltip="Gets the list of facets in the model."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="CStlLoader::fileExists",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a3251a2a11aa8b7f68aea082f8dff25b9",tooltip="Checks if a given file exists."];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="CStlLoader::loadAscii",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a1fec9b1b45068fff38733abb6efd15d9",tooltip="Loads an ASCII STL file."];
+  Node5 -> Node3 [id="edge5_Node000005_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node6 [id="edge6_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="CModel::setModelName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#a7928937a1a8bfda19e66e862f6ef7003",tooltip="Sets the name of the model."];
+  Node5 -> Node7 [id="edge7_Node000005_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="CStlLoader::stlAsciiRead\lFacet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a9213a5a4e9a059b7895bc544ec846a56",tooltip="Reads the triangle data from a facet in the ASCII STL file."];
+  Node7 -> Node8 [id="edge8_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="CStlLoader::readAsciiVertex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#abafc62a639fa04da0a423999d9f92b20",tooltip="Reads a vertex from an ASCII STL file."];
+  Node8 -> Node9 [id="edge9_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="CStlLoader::stringToFloat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a62363527d7de7db3cbc28f09850c43ae",tooltip="Converts a string to a floating-point number."];
+  Node8 -> Node10 [id="edge10_Node000008_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="strToLower",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$common_8h.html#a95169468f308e9c662db968dd9a7833d",tooltip="Converts a container of characters to lowercase."];
+  Node7 -> Node11 [id="edge11_Node000007_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="CStlLoader::stlAsciiRead\lLineAndCheck",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a37888f565ddb56db5dbb688dae066832",tooltip="Reads a line from the ASCII STL file and checks for expected content."];
+  Node11 -> Node10 [id="edge12_Node000011_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node5 -> Node10 [id="edge13_Node000005_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node12 [id="edge14_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="CStlLoader::loadBinary",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#aaea330218a93a997ab829cf8fafd34b2",tooltip="Loads a binary STL file."];
+  Node12 -> Node3 [id="edge15_Node000012_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node6 [id="edge16_Node000012_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node13 [id="edge17_Node000001_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="CStlLoader::readStlFileFormat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#aaec9343af659ff6338395838535db2e4",tooltip="Reads the format of the specified STL file."];
+  Node13 -> Node14 [id="edge18_Node000013_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="CStlLoader::getFileSize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#aa33961d2acac7797015ad800dc1fdd3f",tooltip="Retrieves the size of the specified file in bytes."];
+  Node13 -> Node15 [id="edge19_Node000013_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="CStlLoader::isStlFileAscii\lFormat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a37a2e9b7f47b87087c95d9e4a05e286e",tooltip="Checks if the given STL file is in ASCII format."];
+  Node15 -> Node10 [id="edge20_Node000015_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node16 [id="edge21_Node000013_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="CStlLoader::isStlFileBinary\lFormat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#ad9ee4aac514f4c22bab6b4033cad57ea",tooltip="Checks if the given STL file is in binary format."];
+}

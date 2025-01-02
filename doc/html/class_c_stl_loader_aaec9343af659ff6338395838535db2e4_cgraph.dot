@@ -1,0 +1,17 @@
+digraph "CStlLoader::readStlFileFormat"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CStlLoader::readStlFileFormat",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Reads the format of the specified STL file."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CStlLoader::getFileSize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#aa33961d2acac7797015ad800dc1fdd3f",tooltip="Retrieves the size of the specified file in bytes."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="CStlLoader::isStlFileAscii\lFormat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a37a2e9b7f47b87087c95d9e4a05e286e",tooltip="Checks if the given STL file is in ASCII format."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="strToLower",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$common_8h.html#a95169468f308e9c662db968dd9a7833d",tooltip="Converts a container of characters to lowercase."];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="CStlLoader::isStlFileBinary\lFormat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#ad9ee4aac514f4c22bab6b4033cad57ea",tooltip="Checks if the given STL file is in binary format."];
+}

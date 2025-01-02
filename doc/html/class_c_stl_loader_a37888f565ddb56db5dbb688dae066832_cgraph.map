@@ -1,0 +1,5 @@
+<map id="CStlLoader::stlAsciiReadLineAndCheck" name="CStlLoader::stlAsciiReadLineAndCheck">
+<area shape="rect" id="Node000001" title="Reads a line from the ASCII STL file and checks for expected content." alt="" coords="5,5,189,50"/>
+<area shape="rect" id="Node000002" href="$common_8h.html#a95169468f308e9c662db968dd9a7833d" title="Converts a container of characters to lowercase." alt="" coords="237,14,332,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,25,221,25,221,30,189,30"/>
+</map>

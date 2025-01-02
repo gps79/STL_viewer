@@ -1,0 +1,6 @@
+<map id="CApp::getInstance" name="CApp::getInstance">
+<area shape="rect" id="Node000001" title="Gets the singleton instance of the application." alt="" coords="5,29,146,57"/>
+<area shape="rect" id="Node000002" href="$class_c_app.html#a37efd95335c10617806a48627dd882ac" title="Deleted copy constructor to prevent copying of the singleton instance." alt="" coords="194,29,295,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,41,178,41,178,46,146,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="215,30,210,20,214,11,226,5,244,3,265,5,275,12,273,16,263,10,244,8,227,10,218,15,215,20,219,28"/>
+</map>

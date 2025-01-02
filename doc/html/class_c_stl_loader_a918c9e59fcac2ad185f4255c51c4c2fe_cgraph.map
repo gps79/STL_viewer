@@ -1,0 +1,5 @@
+<map id="CStlLoader::allocateMemory" name="CStlLoader::allocateMemory">
+<area shape="rect" id="Node000001" title="Allocates memory for the model based on the triangle count." alt="" coords="5,5,210,33"/>
+<area shape="rect" id="Node000002" href="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3" title="Gets the list of facets in the model." alt="" coords="258,5,401,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,17,242,17,242,22,210,22"/>
+</map>

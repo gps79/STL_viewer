@@ -1,0 +1,39 @@
+<map id="CStlLoader::loadFile" name="CStlLoader::loadFile">
+<area shape="rect" id="Node000001" title="Loads a 3D model from a specified STL file." alt="" coords="5,113,158,141"/>
+<area shape="rect" id="Node000002" href="$class_c_stl_loader.html#a918c9e59fcac2ad185f4255c51c4c2fe" title="Allocates memory for the model based on the triangle count." alt="" coords="213,5,417,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,111,145,77,205,43,225,36,227,41,207,48,148,81,102,115"/>
+<area shape="rect" id="Node000004" href="$class_c_stl_loader.html#a3251a2a11aa8b7f68aea082f8dff25b9" title="Checks if a given file exists." alt="" coords="235,280,395,308"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="93,140,137,201,169,236,207,265,221,272,219,277,204,269,166,240,133,205,89,143"/>
+<area shape="rect" id="Node000005" href="$class_c_stl_loader.html#a1fec9b1b45068fff38733abb6efd15d9" title="Loads an ASCII STL file." alt="" coords="235,113,395,141"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="158,125,219,125,219,130,158,130"/>
+<area shape="rect" id="Node000012" href="$class_c_stl_loader.html#aaea330218a93a997ab829cf8fafd34b2" title="Loads a binary STL file." alt="" coords="230,57,400,85"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="142,110,239,87,240,92,143,115"/>
+<area shape="rect" id="Node000013" href="$class_c_stl_loader.html#aaec9343af659ff6338395838535db2e4" title="Reads the format of the specified STL file." alt="" coords="206,228,424,256"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="113,139,272,218,270,223,110,144"/>
+<area shape="rect" id="Node000003" href="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3" title="Gets the list of facets in the model." alt="" coords="498,5,641,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="417,17,482,17,482,22,417,22"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="386,110,423,94,437,82,446,70,455,56,471,44,483,37,486,42,473,48,459,60,450,73,441,86,425,99,389,115"/>
+<area shape="rect" id="Node000006" href="$class_c_model.html#a7928937a1a8bfda19e66e862f6ef7003" title="Sets the name of the model." alt="" coords="482,57,657,85"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="380,110,487,86,488,92,382,115"/>
+<area shape="rect" id="Node000007" href="$class_c_stl_loader.html#a9213a5a4e9a059b7895bc544ec846a56" title="Reads the triangle data from a facet in the ASCII STL file." alt="" coords="478,109,661,154"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="395,126,462,127,462,132,395,131"/>
+<area shape="rect" id="Node000010" href="$common_8h.html#a95169468f308e9c662db968dd9a7833d" title="Converts a container of characters to lowercase." alt="" coords="1012,147,1107,174"/>
+<area shape="poly" id="edge13_Node000005_Node000010" title=" " alt="" coords="363,139,415,153,472,163,619,174,765,175,896,171,996,164,996,169,896,176,765,181,619,180,472,168,414,158,361,144"/>
+<area shape="rect" id="Node000008" href="$class_c_stl_loader.html#abafc62a639fa04da0a423999d9f92b20" title="Reads a vertex from an ASCII STL file." alt="" coords="714,57,918,85"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="661,106,741,87,742,92,662,111"/>
+<area shape="rect" id="Node000011" href="$class_c_stl_loader.html#a37888f565ddb56db5dbb688dae066832" title="Reads a line from the ASCII STL file and checks for expected content." alt="" coords="724,109,908,154"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="661,129,709,129,709,134,661,134"/>
+<area shape="rect" id="Node000009" href="$class_c_stl_loader.html#a62363527d7de7db3cbc28f09850c43ae" title="Converts a string to a floating&#45;point number." alt="" coords="966,57,1153,85"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="918,69,950,69,950,74,918,74"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="882,83,919,94,1018,137,1016,142,917,99,881,88"/>
+<area shape="poly" id="edge12_Node000011_Node000010" title=" " alt="" coords="909,140,996,150,996,156,908,145"/>
+<area shape="poly" id="edge15_Node000012_Node000003" title=" " alt="" coords="386,54,483,34,484,39,387,59"/>
+<area shape="poly" id="edge16_Node000012_Node000006" title=" " alt="" coords="400,69,466,69,466,74,400,74"/>
+<area shape="rect" id="Node000014" href="$class_c_stl_loader.html#aa33961d2acac7797015ad800dc1fdd3f" title="Retrieves the size of the specified file in bytes." alt="" coords="482,279,656,306"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="388,254,481,272,480,278,387,259"/>
+<area shape="rect" id="Node000015" href="$class_c_stl_loader.html#a37a2e9b7f47b87087c95d9e4a05e286e" title="Checks if the given STL file is in ASCII format." alt="" coords="724,229,908,274"/>
+<area shape="poly" id="edge19_Node000013_Node000015" title=" " alt="" coords="424,241,708,247,708,252,424,247"/>
+<area shape="rect" id="Node000016" href="$class_c_stl_loader.html#ad9ee4aac514f4c22bab6b4033cad57ea" title="Checks if the given STL file is in binary format." alt="" coords="472,330,666,375"/>
+<area shape="poly" id="edge21_Node000013_Node000016" title=" " alt="" coords="398,254,425,266,441,278,450,291,459,303,474,316,482,321,479,325,470,320,455,307,446,294,437,282,423,271,395,259"/>
+<area shape="poly" id="edge20_Node000015_Node000010" title=" " alt="" coords="877,226,1005,178,1007,183,879,231"/>
+</map>

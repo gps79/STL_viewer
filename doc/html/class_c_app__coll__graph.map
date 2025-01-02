@@ -1,0 +1,11 @@
+<map id="CApp" name="CApp">
+<area shape="rect" id="Node000001" title="The main application class for handling the 3D model viewer." alt="" coords="211,1263,451,2241"/>
+<area shape="rect" id="Node000002" href="$class_c_renderer.html" title="Handles rendering of the 3D model in the OpenGL context." alt="" coords="88,302,332,1198"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,1198,273,1246,267,1247,262,1199"/>
+<area shape="rect" id="Node000003" href="$class_c_fps_counter.html" title="A class to calculate and track the frames per second (FPS) of the application." alt="" coords="5,55,207,188"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,187,136,285,130,286,114,188"/>
+<area shape="rect" id="Node000004" href="$class_c_quaternion.html" title="Represents a quaternion for 3D rotations." alt="" coords="231,5,397,237"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="298,238,290,286,284,285,292,237"/>
+<area shape="rect" id="Node000005" href="$class_c_model.html" title="Represents a 3D model composed of facets." alt="" coords="357,578,549,922"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="435,923,395,1247,390,1246,429,922"/>
+</map>

@@ -1,0 +1,25 @@
+digraph "CStlLoader::loadAscii"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CStlLoader::loadAscii",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Loads an ASCII STL file."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CModel::getFacets",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3",tooltip="Gets the list of facets in the model."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="CModel::setModelName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#a7928937a1a8bfda19e66e862f6ef7003",tooltip="Sets the name of the model."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="CStlLoader::stlAsciiRead\lFacet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a9213a5a4e9a059b7895bc544ec846a56",tooltip="Reads the triangle data from a facet in the ASCII STL file."];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="CStlLoader::readAsciiVertex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#abafc62a639fa04da0a423999d9f92b20",tooltip="Reads a vertex from an ASCII STL file."];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="CStlLoader::stringToFloat",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a62363527d7de7db3cbc28f09850c43ae",tooltip="Converts a string to a floating-point number."];
+  Node5 -> Node7 [id="edge6_Node000005_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="strToLower",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$common_8h.html#a95169468f308e9c662db968dd9a7833d",tooltip="Converts a container of characters to lowercase."];
+  Node4 -> Node8 [id="edge7_Node000004_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="CStlLoader::stlAsciiRead\lLineAndCheck",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_stl_loader.html#a37888f565ddb56db5dbb688dae066832",tooltip="Reads a line from the ASCII STL file and checks for expected content."];
+  Node8 -> Node7 [id="edge8_Node000008_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge9_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+}

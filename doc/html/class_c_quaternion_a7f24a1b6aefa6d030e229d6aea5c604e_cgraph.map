@@ -1,0 +1,5 @@
+<map id="CQuaternion::toMatrix" name="CQuaternion::toMatrix">
+<area shape="rect" id="Node000001" title="Converts the quaternion to a 4x4 matrix." alt="" coords="5,5,168,33"/>
+<area shape="rect" id="Node000002" href="$class_c_quaternion.html#aa59767f2d0835c2c24edefe6e8b7b69f" title="Normalizes the quaternion." alt="" coords="216,5,392,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,17,200,17,200,22,168,22"/>
+</map>

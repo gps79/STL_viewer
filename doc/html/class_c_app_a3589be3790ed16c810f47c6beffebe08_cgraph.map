@@ -1,0 +1,61 @@
+<map id="CApp::init" name="CApp::init">
+<area shape="rect" id="Node000001" title="Initializes the application." alt="" coords="5,325,89,353"/>
+<area shape="rect" id="Node000002" href="$class_c_app.html#a30941bcd8f96afb5d074aacfc3c53f7b" title="Loads the 3D model from the specified file." alt="" coords="167,235,283,262"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,322,181,267,184,272,77,327"/>
+<area shape="rect" id="Node000019" href="$class_c_app.html#a3801e98749747f153e0944f5e997f76c" title="Message handler for the application window." alt="" coords="137,351,313,378"/>
+<area shape="poly" id="edge24_Node000001_Node000019" title=" " alt="" coords="89,342,121,347,121,352,89,348"/>
+<area shape="rect" id="Node000003" href="$class_c_stl_loader.html#a44ac4c743de8e4bc4675d1da11180e94" title="Loads a 3D model from a specified STL file." alt="" coords="379,171,531,198"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,232,387,200,389,206,278,237"/>
+<area shape="rect" id="Node000004" href="$class_c_stl_loader.html#a918c9e59fcac2ad185f4255c51c4c2fe" title="Allocates memory for the model based on the triangle count." alt="" coords="604,171,809,198"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,182,589,182,589,187,532,187"/>
+<area shape="rect" id="Node000006" href="$class_c_stl_loader.html#a3251a2a11aa8b7f68aea082f8dff25b9" title="Checks if a given file exists." alt="" coords="626,119,787,146"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="525,167,620,147,622,153,526,173"/>
+<area shape="rect" id="Node000007" href="$class_c_stl_loader.html#a1fec9b1b45068fff38733abb6efd15d9" title="Loads an ASCII STL file." alt="" coords="626,275,787,302"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="524,197,551,209,566,222,575,235,584,248,599,260,613,267,610,271,596,264,580,251,571,238,562,225,548,213,522,201"/>
+<area shape="rect" id="Node000014" href="$class_c_stl_loader.html#aaea330218a93a997ab829cf8fafd34b2" title="Loads a binary STL file." alt="" coords="621,223,792,250"/>
+<area shape="poly" id="edge16_Node000003_Node000014" title=" " alt="" coords="526,196,622,216,620,222,525,202"/>
+<area shape="rect" id="Node000015" href="$class_c_stl_loader.html#aaec9343af659ff6338395838535db2e4" title="Reads the format of the specified STL file." alt="" coords="597,60,816,88"/>
+<area shape="poly" id="edge19_Node000003_Node000015" title=" " alt="" coords="478,168,531,137,596,105,636,90,637,95,598,110,533,142,481,172"/>
+<area shape="rect" id="Node000005" href="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3" title="Gets the list of facets in the model." alt="" coords="889,176,1033,204"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="809,184,874,185,874,191,809,189"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="786,272,814,260,829,249,838,238,847,226,862,214,877,207,879,212,865,219,851,230,842,241,832,253,817,264,788,276"/>
+<area shape="rect" id="Node000008" href="$class_c_model.html#a7928937a1a8bfda19e66e862f6ef7003" title="Sets the name of the model." alt="" coords="873,228,1049,256"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="785,271,866,256,867,262,786,277"/>
+<area shape="rect" id="Node000009" href="$class_c_stl_loader.html#a9213a5a4e9a059b7895bc544ec846a56" title="Reads the triangle data from a facet in the ASCII STL file." alt="" coords="869,330,1053,375"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="765,300,855,323,854,328,764,305"/>
+<area shape="rect" id="Node000012" href="$common_8h.html#a95169468f308e9c662db968dd9a7833d" title="Converts a container of characters to lowercase." alt="" coords="1403,309,1499,337"/>
+<area shape="poly" id="edge15_Node000007_Node000012" title=" " alt="" coords="787,290,1388,318,1388,323,787,295"/>
+<area shape="rect" id="Node000010" href="$class_c_stl_loader.html#abafc62a639fa04da0a423999d9f92b20" title="Reads a vertex from an ASCII STL file." alt="" coords="1106,399,1309,426"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1054,372,1133,392,1132,397,1052,377"/>
+<area shape="rect" id="Node000013" href="$class_c_stl_loader.html#a37888f565ddb56db5dbb688dae066832" title="Reads a line from the ASCII STL file and checks for expected content." alt="" coords="1116,330,1299,375"/>
+<area shape="poly" id="edge13_Node000009_Node000013" title=" " alt="" coords="1053,350,1100,350,1100,355,1053,355"/>
+<area shape="rect" id="Node000011" href="$class_c_stl_loader.html#a62363527d7de7db3cbc28f09850c43ae" title="Converts a string to a floating&#45;point number." alt="" coords="1357,399,1545,426"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="1310,410,1341,410,1341,415,1310,415"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="1272,396,1308,385,1408,342,1410,347,1310,390,1274,401"/>
+<area shape="poly" id="edge14_Node000013_Node000012" title=" " alt="" coords="1300,339,1387,328,1388,333,1300,344"/>
+<area shape="poly" id="edge17_Node000014_Node000005" title=" " alt="" coords="785,219,873,203,874,208,786,225"/>
+<area shape="poly" id="edge18_Node000014_Node000008" title=" " alt="" coords="792,236,858,237,858,242,792,241"/>
+<area shape="rect" id="Node000016" href="$class_c_stl_loader.html#aa33961d2acac7797015ad800dc1fdd3f" title="Retrieves the size of the specified file in bytes." alt="" coords="874,5,1048,33"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="773,57,878,34,879,39,775,62"/>
+<area shape="rect" id="Node000017" href="$class_c_stl_loader.html#a37a2e9b7f47b87087c95d9e4a05e286e" title="Checks if the given STL file is in ASCII format." alt="" coords="1116,129,1300,174"/>
+<area shape="poly" id="edge21_Node000015_Node000017" title=" " alt="" coords="816,69,934,75,997,82,1059,93,1102,105,1144,120,1142,125,1101,110,1057,98,996,87,933,80,816,75"/>
+<area shape="rect" id="Node000018" href="$class_c_stl_loader.html#ad9ee4aac514f4c22bab6b4033cad57ea" title="Checks if the given STL file is in binary format." alt="" coords="864,108,1058,152"/>
+<area shape="poly" id="edge23_Node000015_Node000018" title=" " alt="" coords="773,86,849,103,848,108,772,91"/>
+<area shape="poly" id="edge22_Node000017_Node000012" title=" " alt="" coords="1243,172,1419,298,1416,302,1239,176"/>
+<area shape="rect" id="Node000020" href="$class_c_app.html#a37efd95335c10617806a48627dd882ac" title="Deleted copy constructor to prevent copying of the singleton instance." alt="" coords="656,363,757,390"/>
+<area shape="poly" id="edge25_Node000019_Node000020" title=" " alt="" coords="314,360,549,362,641,368,640,373,549,367,314,365"/>
+<area shape="rect" id="Node000021" href="$class_c_renderer.html#ab196e6af463395497a91d06b8788e78d" title="Destroys the renderer and cleans up resources." alt="" coords="381,428,530,456"/>
+<area shape="poly" id="edge27_Node000019_Node000021" title=" " alt="" coords="263,376,362,413,387,421,386,426,360,418,261,381"/>
+<area shape="rect" id="Node000022" href="$class_c_app.html#a833e54f67487c94918150d49824ba470" title="Gets the singleton instance of the application." alt="" coords="385,376,525,404"/>
+<area shape="poly" id="edge28_Node000019_Node000022" title=" " alt="" coords="314,372,370,378,369,383,313,377"/>
+<area shape="rect" id="Node000023" href="$class_c_app.html#a294fedb9b7cdb6c46decfb48e88e5145" title="Handles a key press event." alt="" coords="361,480,549,508"/>
+<area shape="poly" id="edge30_Node000019_Node000023" title=" " alt="" coords="243,377,293,420,327,444,362,465,379,472,376,477,360,470,324,449,290,424,239,381"/>
+<area shape="rect" id="Node000024" href="$class_c_renderer.html#a0f4632f7e616b1ed380b8e22a73d1711" title="Sets the viewport and view settings." alt="" coords="379,532,531,560"/>
+<area shape="poly" id="edge31_Node000019_Node000024" title=" " alt="" coords="237,377,285,445,321,484,362,517,374,523,371,528,360,521,317,488,280,448,232,380"/>
+<area shape="rect" id="Node000025" href="$class_c_app.html#af63b07c46cab4660d89fe614b6fd297c" title="Sets the window focus state." alt="" coords="366,223,545,250"/>
+<area shape="poly" id="edge32_Node000019_Node000025" title=" " alt="" coords="239,348,290,305,324,282,360,261,376,254,379,258,362,266,327,286,294,310,243,352"/>
+<area shape="rect" id="Node000026" href="$class_c_renderer.html#a3890d2e1c2446e768f31d5fb9b66c2a5" title="Adjusts the zoom level based on mouse scroll activity." alt="" coords="386,275,524,302"/>
+<area shape="poly" id="edge33_Node000019_Node000026" title=" " alt="" coords="269,347,395,305,397,310,270,353"/>
+<area shape="poly" id="edge26_Node000020_Node000020" title=" " alt="" coords="664,364,657,354,662,344,679,338,707,336,736,338,752,345,750,350,735,344,706,341,680,343,666,348,662,353,668,361"/>
+<area shape="poly" id="edge29_Node000022_Node000020" title=" " alt="" coords="526,383,640,377,640,383,526,389"/>
+</map>

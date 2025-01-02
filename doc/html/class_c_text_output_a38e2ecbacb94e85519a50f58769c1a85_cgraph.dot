@@ -1,0 +1,11 @@
+digraph "CTextOutput::CTextOutput"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CTextOutput::CTextOutput",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Constructs a CTextOutput object with specified screen dimensions."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CTextOutput::setFont",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_text_output.html#a56798d58aa4a5f1b64f48307d7c59832",tooltip="Sets the font for text output."];
+}

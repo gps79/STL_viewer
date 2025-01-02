@@ -1,0 +1,7 @@
+<map id="CRenderer::init" name="CRenderer::init">
+<area shape="rect" id="Node000001" title="Initializes the renderer and creates the window." alt="" coords="5,32,125,60"/>
+<area shape="rect" id="Node000002" href="$class_c_renderer.html#a0dd8b5bfe27f316bd497ee7036753cf7" title="Creates the OpenGL rendering context." alt="" coords="173,5,413,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,36,157,32,157,38,125,42"/>
+<area shape="rect" id="Node000003" href="$class_c_renderer.html#acf1254960b15fd0d36530c73f1f94ea6" title="Creates the rendering window." alt="" coords="195,57,391,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,50,180,56,179,61,125,55"/>
+</map>

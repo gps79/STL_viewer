@@ -1,0 +1,7 @@
+<map id="CRenderer" name="CRenderer">
+<area shape="rect" id="Node000001" title="Handles rendering of the 3D model in the OpenGL context." alt="" coords="88,302,332,1198"/>
+<area shape="rect" id="Node000002" href="$class_c_fps_counter.html" title="A class to calculate and track the frames per second (FPS) of the application." alt="" coords="5,55,207,188"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,187,136,285,130,286,114,188"/>
+<area shape="rect" id="Node000003" href="$class_c_quaternion.html" title="Represents a quaternion for 3D rotations." alt="" coords="231,5,397,237"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="298,238,290,286,284,285,292,237"/>
+</map>

@@ -1,0 +1,25 @@
+digraph "CApp::messageHandler"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CApp::messageHandler",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Message handler for the application window."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CApp::CApp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_app.html#a37efd95335c10617806a48627dd882ac",tooltip="Deleted copy constructor to prevent copying of the singleton instance."];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge3_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="CRenderer::destroy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_renderer.html#ab196e6af463395497a91d06b8788e78d",tooltip="Destroys the renderer and cleans up resources."];
+  Node1 -> Node4 [id="edge4_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="CApp::getInstance",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_app.html#a833e54f67487c94918150d49824ba470",tooltip="Gets the singleton instance of the application."];
+  Node4 -> Node2 [id="edge5_Node000004_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge6_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="CApp::handleKeyPressed",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_app.html#a294fedb9b7cdb6c46decfb48e88e5145",tooltip="Handles a key press event."];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="CRenderer::setView",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_renderer.html#a0f4632f7e616b1ed380b8e22a73d1711",tooltip="Sets the viewport and view settings."];
+  Node1 -> Node7 [id="edge8_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="CApp::setWindowFocus",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_app.html#af63b07c46cab4660d89fe614b6fd297c",tooltip="Sets the window focus state."];
+  Node1 -> Node8 [id="edge9_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="CRenderer::zoom",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_renderer.html#a3890d2e1c2446e768f31d5fb9b66c2a5",tooltip="Adjusts the zoom level based on mouse scroll activity."];
+}

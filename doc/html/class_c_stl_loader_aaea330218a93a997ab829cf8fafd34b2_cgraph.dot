@@ -1,0 +1,13 @@
+digraph "CStlLoader::loadBinary"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CStlLoader::loadBinary",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Loads a binary STL file."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CModel::getFacets",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#ae779298db1d5f9f84d21ac12618b02e3",tooltip="Gets the list of facets in the model."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="CModel::setModelName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_model.html#a7928937a1a8bfda19e66e862f6ef7003",tooltip="Sets the name of the model."];
+}

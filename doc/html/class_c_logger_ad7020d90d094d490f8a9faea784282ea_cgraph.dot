@@ -1,0 +1,11 @@
+digraph "CLogger::operator&lt;&lt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Arial,fontsize=11,labelfontname=Arial,labelfontsize=11];
+  node [fontname=Arial,fontsize=11,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="CLogger::operator\<\<",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Empty operator overload when logging is disabled."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="CLogger::CLogger",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_c_logger.html#a9bee05627064da478ba32af360b8ef19",tooltip=" "];
+}
