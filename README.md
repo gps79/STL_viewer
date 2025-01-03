@@ -46,7 +46,7 @@ Before running the application, make sure that the following libraries are insta
 
 ## Documentation
 
-  Developer's documentation can be found [here](doc/html/index.html).
+  Developer's documentation can be found [here](https://gps79.github.io/STL_viewer/doc/html/index.html).
 
 ## License
 
