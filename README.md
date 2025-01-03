@@ -1,6 +1,6 @@
 # STL File Viewer for Windows
 
-This is a simple **STL file viewer** application built for **Windows** using the **Win32 API** and the **FreeGLUT library**. The application allows you to load and view STL files (commonly used in 3D printing) interactively. It provides basic visualization of 3D models, allowing users to rotate and inspect STL files.
+This is a simple **STL file viewer** 32-bit application built for **Windows** using the **Win32 API** and the **FreeGLUT library**. The application allows you to load and view STL files (commonly used in 3D printing) interactively. It provides basic visualization of 3D models, allowing users to rotate and inspect STL files.
 
 ## Screenshot
 
@@ -11,13 +11,13 @@ Here is a screenshot of the STL file viewer application in action:
 ## Features
 - Load STL files and view them in 3D.
 - Rotate and zoom the model for better inspection.
-- Uses freeglut for OpenGL rendering.
+- Uses FreeGLUT library for OpenGL rendering.
+- View 3D model in various modes (wireframe, outlined triangles)
 
 ## Prerequisites
 Before running the application, make sure that the following libraries are installed:
 
-- **Win32 API** (pre-installed with Visual Studio for Windows development)
-- **freeglut library** (for OpenGL rendering)
+- freeglut.dll
 
 ## Installation
 
@@ -30,17 +30,21 @@ Before running the application, make sure that the following libraries are insta
 2. **Get the build environment:**
 
     Download and install MinGW with GCC-6.3.0-1
+   
     Download [freeGlut-MinGW-3.0.0-1](https://www.transmissionzero.co.uk/files/software/development/GLUT/) library
 
-3. **Build the application:**
+   Extract **FreeGLUT** include, lib and bin directories content in appropriate directories of your GCC compiler
 
-    Open the project in **Code::Blocks** IDE
-   or in the MinGW console type
+4. **Build the application:**
+
+    Open the project in **Code::Blocks** IDE and build the application,
+   
+   or in the MinGW console type:
    ```bash
    make all
    ```
 
-4. **Run the application:**
+5. **Run the application:**
 
     Once the project is built, you can run the executable `stl_viewer.exe <file>.stl` to view the STL file.
 
