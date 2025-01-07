@@ -31,7 +31,7 @@ Before running the application, make sure that the following libraries are insta
 
     Download and install MinGW with GCC-6.3.0-1
    
-    Download [freeGlut-MinGW-3.0.0-1](https://www.transmissionzero.co.uk/files/software/development/GLUT/) library
+    Download [freeGlut-MinGW-3.0.0-1](https://www.transmissionzero.co.uk/files/software/development/GLUT/freeglut-MinGW-3.0.0-1.mp.zip) library
 
    Extract **FreeGLUT** include, lib and bin directories content in appropriate directories of your GCC compiler
 
