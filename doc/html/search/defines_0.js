@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logprint_0',['logPrint',['../_c_logger_8h.html#a121cb247a1ea5a705459dd82e9ec34cd',1,'CLogger.h']]]
+  ['app_5fversion_0',['APP_VERSION',['../common_8h.html#a92673e33f27532767749b79edb8ef806',1,'common.h']]]
 ];

@@ -129,6 +129,14 @@ public:
     void setNextSkipTrianglesMode();
 
     /**
+     * @brief Converts STL model to OpenGL coordinate system.
+     *
+     * This function applies initial quaternion 90 degrees rotation around X-axis to convert 3D coordinate system
+     * from the STL model (Z-axis pointing to the top) to the OpenGL model (Z-axis is pointing to the back)
+     */
+    void convertCoordinateSystem();
+
+    /**
      * @brief Rotates the model view orientation around the X-axis.
      *
      * This function applies a rotation specified by the input angle on
@@ -167,7 +175,7 @@ public:
      * @param iX The displacement along the X-axis.
      * @param iY The displacement along the Y-axis.
      */
-    void moveViewPos(int iX, int iY) {m_iViewPosX += iX; m_iViewPosY += iY; }
+    void moveViewPos(int iX, int iY) { m_iViewPosX += iX; m_iViewPosY += iY; }
 
 protected:
 

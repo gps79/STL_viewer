@@ -77,7 +77,7 @@ bool CStlLoader::fileExists(const std::string& sFileName) const
 
 std::streampos CStlLoader::getFileSize(const std::string &sFileName) const
 {
-    std::streampos fileSize = 0;
+    std::streampos fileSize{0};
     std::ifstream file(sFileName, std::ios::binary);
     if (file)
     {
@@ -97,7 +97,7 @@ void CStlLoader::readStlFileFormat(const std::string &sFileName)
     m_u32TriangleNumber = 0;
     m_fileFormat = StlFormat::unknown;
 
-    std::streampos fileSize = getFileSize(sFileName);
+    std::streampos fileSize{getFileSize(sFileName)};
     logPrint(Debug) << "file \"" <<  sFileName << "\" size: " << fileSize << "B";
     if (fileSize >= 15) // The minimum size of an empty ASCII file is 15 bytes.
     {
@@ -211,7 +211,7 @@ bool CStlLoader::isStlFileBinaryFormat(const std::string &sFileName, std::stream
 {
     bool bRetVal{false};
     uint32_t u32TriangleNumber{0};
-    constexpr size_t facetSize = 3*sizeof(float) + 3*3*sizeof(float) + sizeof(uint16_t);
+    constexpr size_t facetSize{3*sizeof(float) + 3*3*sizeof(float) + sizeof(uint16_t)};
 
     logPrint(Trace) << "isStlFileBinaryFormat(\"" << sFileName << "\"," << fileSize << ")";
     std::ifstream file(sFileName, std::ios::binary | std::ios::in);
@@ -293,12 +293,12 @@ Err CStlLoader::loadBinary(const std::string &sFileName, CModel &oModel)
         float point3[3];
         uint16_t attributes;
     };
-    constexpr size_t stlBinaryFacetSize = 3*sizeof(float) + 3*3*sizeof(float) + sizeof(uint16_t);
+    constexpr size_t stlBinaryFacetSize{3*sizeof(float) + 3*3*sizeof(float) + sizeof(uint16_t)};
 
     Err retVal{Err::NoError};
 
     logPrint(Trace) << "loadBinary(\"" << sFileName << "\")";
-    std::vector<C3DFacet> &vFacets = oModel.getFacets();
+    std::vector<C3DFacet> &vFacets{oModel.getFacets()};
 
     if (m_u32TriangleNumber > 0)
     {
@@ -317,7 +317,7 @@ Err CStlLoader::loadBinary(const std::string &sFileName, CModel &oModel)
                     file.seekg(4, std::ios::cur); // skip the number of facets as it is already known (4B)
                     if (file.good())
                     {
-                        std::streampos readPos = StlBinaryDataStart;
+                        std::streampos readPos{StlBinaryDataStart};
                         StlBinaryFacet record;
                         for (auto &facet: vFacets)
                         {
@@ -402,7 +402,7 @@ Err CStlLoader::loadAscii(const std::string &sFileName, CModel &oModel)
     Err retVal{Err::NoError};
 
     logPrint(Trace) << "loadAscii(\"" << sFileName << "\")";
-    std::vector<C3DFacet> &vFacets = oModel.getFacets();
+    std::vector<C3DFacet> &vFacets{oModel.getFacets()};
 
     if (m_u32TriangleNumber > 0)
     {
@@ -500,7 +500,7 @@ Err CStlLoader::stlAsciiReadLineAndCheck(std::ifstream &file, const std::string 
     if (file.good())
     {
         strToLower(sLine);
-        size_t pos = sLine.find_first_not_of(" "); // indentation with spaces is allowed
+        size_t pos{sLine.find_first_not_of(" ")}; // indentation with spaces is allowed
         if (sLine.find(sExpected, pos) != pos)
         {
             logPrint(Error) << "Line:" << u32CurrentLineNo << " '" << sExpected << "' expected";
@@ -518,9 +518,7 @@ Err CStlLoader::stlAsciiReadLineAndCheck(std::ifstream &file, const std::string 
 
 Err CStlLoader::stlAsciiReadFacet(std::ifstream &file, C3DFacet &facet, uint32_t &u32CurrentLineNo)
 {
-    Err retVal{Err::NoError};
-
-    retVal = readAsciiVertex(file, "facet normal ", u32CurrentLineNo, facet.normal); // read expected text: "facet normal ....."
+    Err retVal{readAsciiVertex(file, "facet normal ", u32CurrentLineNo, facet.normal)}; // read expected text: "facet normal ....."
     if (Err::NoError == retVal)
     {
         retVal = stlAsciiReadLineAndCheck(file, "outer loop", u32CurrentLineNo); // read expected text: "outer loop"
@@ -576,27 +574,27 @@ Err CStlLoader::readAsciiVertex(std::ifstream &file, const std::string &sHeader,
     if (file.good())
     {
         strToLower(sLine);
-        size_t pos = sLine.find_first_not_of(" ");
+        size_t pos{sLine.find_first_not_of(" ")};
         if (sLine.find(sHeader, pos) == pos)
         {
-            size_t number1Begin = sLine.find_first_not_of(" ", pos+sHeader.length()); // beginning of the first <float>
+            size_t number1Begin{sLine.find_first_not_of(" ", pos+sHeader.length())}; // beginning of the first <float>
             if (std::string::npos != number1Begin)
             {
-                size_t number1End = sLine.find(" ", number1Begin); // end of the first <float>
+                size_t number1End{sLine.find(" ", number1Begin)}; // end of the first <float>
                 if (std::string::npos != number1End)
                 {
                     --number1End;
-                    size_t number2Begin = sLine.find_first_not_of(" ", number1End+1); // beginning of the second <float>
+                    size_t number2Begin{sLine.find_first_not_of(" ", number1End+1)}; // beginning of the second <float>
                     if (std::string::npos != number2Begin)
                     {
-                        size_t number2End = sLine.find(" ", number2Begin);// end of the second <float>
+                        size_t number2End{sLine.find(" ", number2Begin)};// end of the second <float>
                         if (std::string::npos != number2End)
                         {
                             --number2End;
-                            size_t number3Begin = sLine.find_first_not_of(" ", number2End+1); // beginning of the third <float>
+                            size_t number3Begin{sLine.find_first_not_of(" ", number2End+1)}; // beginning of the third <float>
                             if (std::string::npos != number3Begin)
                             {
-                                size_t number3End = sLine.length()-1;// end of the third <float>
+                                size_t number3End{sLine.length()-1};// end of the third <float>
 
                                 // now convert strings to floats
                                 retVal = stringToFloat(sLine.substr(number1Begin, number1End-number1Begin+1), oVertex.m_fX);

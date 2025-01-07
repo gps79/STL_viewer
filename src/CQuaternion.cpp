@@ -33,7 +33,7 @@ void CQuaternion::reset()
 
 void CQuaternion::normalize()
 {
-    float fLength = std::sqrt(m_fX * m_fX + m_fY * m_fY + m_fZ * m_fZ + m_fW * m_fW);
+    float fLength{std::sqrt(m_fX * m_fX + m_fY * m_fY + m_fZ * m_fZ + m_fW * m_fW)};
     m_fX /= fLength;
     m_fY /= fLength;
     m_fZ /= fLength;
@@ -42,10 +42,10 @@ void CQuaternion::normalize()
 
 void CQuaternion::multiple(float fX, float fY, float fZ, float fW)
 {
-    float fNewX = fX * m_fW + fW * m_fX + fZ * m_fY - fY * m_fZ;
-    float fNewY = fY * m_fW - fZ * m_fX + fW * m_fY + fX * m_fZ;
-    float fNewZ = fZ * m_fW + fY * m_fX - fX * m_fY + fW * m_fZ;
-    float fNewW = fW * m_fW - fX * m_fX - fY * m_fY - fZ * m_fZ;
+    float fNewX{fX * m_fW + fW * m_fX + fZ * m_fY - fY * m_fZ};
+    float fNewY{fY * m_fW - fZ * m_fX + fW * m_fY + fX * m_fZ};
+    float fNewZ{fZ * m_fW + fY * m_fX - fX * m_fY + fW * m_fZ};
+    float fNewW{fW * m_fW - fX * m_fX - fY * m_fY - fZ * m_fZ};
     m_fW = fNewW;
     m_fX = fNewX;
     m_fY = fNewY;
@@ -56,28 +56,34 @@ TQuatMatrix CQuaternion::toMatrix()
 {
     normalize();
 
-    float fXX = m_fX * m_fX;
-    float fXY = m_fX * m_fY;
-    float fXZ = m_fX * m_fZ;
-    float fXW = m_fX * m_fW;
-    float fYY = m_fY * m_fY;
-    float fYZ = m_fY * m_fZ;
-    float fYW = m_fY * m_fW;
-    float fZZ = m_fZ * m_fZ;
-    float fZW = m_fZ * m_fW;
+    float fXX{m_fX * m_fX};
+    float fXY{m_fX * m_fY};
+    float fXZ{m_fX * m_fZ};
+    float fXW{m_fX * m_fW};
+    float fYY{m_fY * m_fY};
+    float fYZ{m_fY * m_fZ};
+    float fYW{m_fY * m_fW};
+    float fZZ{m_fZ * m_fZ};
+    float fZW{m_fZ * m_fW};
 
-    TQuatMatrix fMatrix;
-    fMatrix[0] = 1.0f - 2.0f * ( fYY + fZZ );
-    fMatrix[1] = 2.0f * ( fXY - fZW );
-    fMatrix[2] = 2.0f * ( fXZ + fYW );
-    fMatrix[4] = 2.0f * ( fXY + fZW );
-    fMatrix[5] = 1.0f - 2.0f * ( fXX + fZZ );
-    fMatrix[6] = 2.0f * ( fYZ - fXW );
-    fMatrix[8] = 2.0f * ( fXZ - fYW );
-    fMatrix[9] = 2.0f * ( fYZ + fXW );
-    fMatrix[10] = 1.0f - 2.0f * ( fXX + fYY );
-    fMatrix[3] = fMatrix[7] = fMatrix[11] = fMatrix[12] = fMatrix[13] = fMatrix[14] = 0.0f;
-    fMatrix[15] = 1.0f;
+    TQuatMatrix fMatrix{
+        1.0f - 2.0f * ( fYY + fZZ ),
+        2.0f * ( fXY - fZW ),
+        2.0f * ( fXZ + fYW ),
+        0.0f,
+        2.0f * ( fXY + fZW ),
+        1.0f - 2.0f * ( fXX + fZZ ),
+        2.0f * ( fYZ - fXW ),
+        0.0f,
+        2.0f * ( fXZ - fYW ),
+        2.0f * ( fYZ + fXW ),
+        1.0f - 2.0f * ( fXX + fYY ),
+        0.0f,
+        0.0f,
+        0.0f,
+        0.0f,
+        1.0f
+    };
 
     return fMatrix;
 }

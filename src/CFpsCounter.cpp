@@ -14,7 +14,7 @@ void CFpsCounter::nextFrame()
     constexpr uint32_t MinNumFramesToCalcFps{25};
 
     ++m_u32Frames;
-    float fCurrentTimeSeconds = static_cast<float>(GetTickCount()) / 1000.0f;
+    const float fCurrentTimeSeconds{static_cast<float>(GetTickCount()) / 1000.0f};
     if (((m_u32Frames >= MinNumFramesToCalcFps) && ((fCurrentTimeSeconds - m_fStartTimeSeconds) > QuarterSecond))
          || ((fCurrentTimeSeconds - m_fStartTimeSeconds) > OneSecond))
     {

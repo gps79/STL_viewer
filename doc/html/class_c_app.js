@@ -34,6 +34,5 @@ var class_c_app =
     [ "m_iRmbDragMouseStartPosY", "class_c_app.html#ae210692978bfceadc38975865ad4b876", null ],
     [ "m_oModel", "class_c_app.html#a30691455946222cc140a994c866688a6", null ],
     [ "m_oRenderer", "class_c_app.html#afcb5b179368e99dfca4953be30ddfa50", null ],
-    [ "M_PI", "class_c_app.html#a30b5eb717636476e83471bc73d26238f", null ],
     [ "m_sInputFileName", "class_c_app.html#aac4640e743f12e9ec1fc5964548c82d5", null ]
 ];

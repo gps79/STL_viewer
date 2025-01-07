@@ -28,12 +28,12 @@ void CModel::normalizeModel()
     if (m_vFacets.size() > 0)
     {
         // find Min and Max values in all dimensions
-        float fMinX = m_vFacets[0].p1.m_fX;
-        float fMaxX = m_vFacets[0].p1.m_fX;
-        float fMinY = m_vFacets[0].p1.m_fY;
-        float fMaxY = m_vFacets[0].p1.m_fY;
-        float fMinZ = m_vFacets[0].p1.m_fZ;
-        float fMaxZ = m_vFacets[0].p1.m_fZ;
+        float fMinX{m_vFacets[0].p1.m_fX};
+        float fMaxX{m_vFacets[0].p1.m_fX};
+        float fMinY{m_vFacets[0].p1.m_fY};
+        float fMaxY{m_vFacets[0].p1.m_fY};
+        float fMinZ{m_vFacets[0].p1.m_fZ};
+        float fMaxZ{m_vFacets[0].p1.m_fZ};
         for (const auto &oFacet : m_vFacets)
         {
             fMinX = std::min({fMinX, oFacet.p1.m_fX, oFacet.p2.m_fX, oFacet.p3.m_fX});
@@ -43,7 +43,7 @@ void CModel::normalizeModel()
             fMinZ = std::min({fMinZ, oFacet.p1.m_fZ, oFacet.p2.m_fZ, oFacet.p3.m_fZ});
             fMaxZ = std::max({fMaxZ, oFacet.p1.m_fZ, oFacet.p2.m_fZ, oFacet.p3.m_fZ});
         }
-        float fScale = std::max({fMaxX-fMinX, fMaxY-fMinY, fMaxZ-fMinZ});
+        float fScale{std::max({fMaxX-fMinX, fMaxY-fMinY, fMaxZ-fMinZ})};
         if (fScale > 0.0f)
         {
             fScale = 1.0f / fScale;
@@ -52,9 +52,9 @@ void CModel::normalizeModel()
         {
             fScale = 0.0f;
         }
-        float fShiftX = fMinX + 0.5f*(fMaxX-fMinX);
-        float fShiftY = fMinY + 0.5f*(fMaxY-fMinY);
-        float fShiftZ = fMinZ + 0.5f*(fMaxZ-fMinZ);
+        float fShiftX{fMinX + 0.5f*(fMaxX-fMinX)};
+        float fShiftY{fMinY + 0.5f*(fMaxY-fMinY)};
+        float fShiftZ{fMinZ + 0.5f*(fMaxZ-fMinZ)};
 
         logPrint(Debug) << "Normalizing model:";
         logPrint(Debug) << "scale=" << fScale;

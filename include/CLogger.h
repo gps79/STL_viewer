@@ -65,7 +65,7 @@ public:
      */
     CLogger(LogLevel logLevel, const char * szFile, int iLine)
     {
-        constexpr std::array<const char *,6> szLevels = {"", "ERR", "WRN", "INF", "DBG", "TRC"};
+        constexpr std::array<const char *,6> szLevels{"", "ERR", "WRN", "INF", "DBG", "TRC"};
         m_bufferHeader << szFile << ";" << iLine << ";" << ((logLevel<szLevels.size())? szLevels[logLevel] : "???") << ";";
     }
 

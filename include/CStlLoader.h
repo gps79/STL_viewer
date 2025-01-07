@@ -216,8 +216,8 @@ private:
      */
     Err stringToFloat(const std::string &sStr, float &fNumber) const;
 
-    static constexpr int StlBinaryHeaderSize = 80; ///< Size of the STL binary header.
-    static constexpr int StlBinaryDataStart = 84; ///< Start position of the binary data in the STL file.
+    static constexpr int StlBinaryHeaderSize{80}; ///< Size of the STL binary header.
+    static constexpr int StlBinaryDataStart{84}; ///< Start position of the binary data in the STL file.
 
     StlFormat m_fileFormat{StlFormat::notChecked}; ///< The format of the STL file.
     uint32_t m_u32TriangleNumber{0}; ///< Number of triangles in the STL file.

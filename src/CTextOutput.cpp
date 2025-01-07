@@ -29,14 +29,14 @@ void CTextOutput::setFont(int iFontNum)
 
 int CTextOutput::printLn(const std::string &sStr)
 {
-	float x1 = m_iCursorPosX;
-	auto pFont = m_aGlutFonts[m_iCurrentFont].first;
-	auto iFontHeight = m_aGlutFonts[m_iCurrentFont].second;
+	int iPosX{m_iCursorPosX};
+	auto pFont{m_aGlutFonts[m_iCurrentFont].first};
+	auto iFontHeight{m_aGlutFonts[m_iCurrentFont].second};
 	for (const char &cChar : sStr)
     {
-		glRasterPos2f(x1, m_iCursorPosY + iFontHeight);
+		glRasterPos2f(iPosX, m_iCursorPosY + iFontHeight);
 		glutBitmapCharacter(pFont, cChar);
-		x1 += glutBitmapWidth(pFont, cChar) + m_iSpacing;
+		iPosX += glutBitmapWidth(pFont, cChar) + m_iSpacing;
     }
 	m_iCursorPosY += iFontHeight;
 	return sStr.length();

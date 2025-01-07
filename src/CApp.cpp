@@ -17,14 +17,15 @@ Err CApp::getCmdLineArguments()
     Err retVal{Err::NoError};
 
     int iArgCount{0};
-    auto szaArgList = CommandLineToArgvW(GetCommandLineW(), &iArgCount);
-    if (nullptr != szaArgList)
+    auto szaArgList{CommandLineToArgvW(GetCommandLineW(), &iArgCount)};
+    if (szaArgList)
     {
-        if (2 == iArgCount)
+        constexpr int expectedArgumentsNumber{2};
+        if (expectedArgumentsNumber == iArgCount)
         {
             logPrint(Trace) << "Reading command line arguments";
-            int iArg1Len = lstrlenW(szaArgList[1]);
-            int iStringLen = WideCharToMultiByte(CP_ACP, 0, szaArgList[1], iArg1Len, nullptr, 0, nullptr, nullptr);
+            int iArg1Len{lstrlenW(szaArgList[1])};
+            int iStringLen{WideCharToMultiByte(CP_ACP, 0, szaArgList[1], iArg1Len, nullptr, 0, nullptr, nullptr)};
             std::string sInputFileName;
             sInputFileName.resize(iStringLen);
             WideCharToMultiByte(CP_ACP, 0, szaArgList[1], iArg1Len, &sInputFileName[0], iStringLen, nullptr, nullptr);
@@ -87,9 +88,7 @@ void CApp::handleErrorCode(Err errorCode) const
 
 Err CApp::init()
 {
-    Err retVal{Err::NoError};
-
-    retVal = loadFile();
+    Err retVal{loadFile()};
     if (Err::NoError == retVal)
     {
         retVal = m_oRenderer.init(messageHandler);
@@ -105,7 +104,7 @@ Err CApp::init()
 long int WINAPI CApp::messageHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	int iRetVal{1};
-	CApp &oApp = CApp::getInstance();
+	CApp &oApp{CApp::getInstance()};
 
 	switch (uMsg)
 	{
@@ -115,9 +114,10 @@ long int WINAPI CApp::messageHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM
 
         case WM_SIZE:
             {
-                int iWindowWidth = LOWORD(lParam);
-                int iWindowHeight = HIWORD(lParam);
+                int iWindowWidth{LOWORD(lParam)};
+                int iWindowHeight{HIWORD(lParam)};
                 oApp.m_oRenderer.setView(iWindowWidth, iWindowHeight);
+                iRetVal = 0;
             }
             break;
 
@@ -137,8 +137,8 @@ long int WINAPI CApp::messageHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM
 
 		case WM_MOUSEWHEEL:
             {
-                int16_t i16Delta = GET_WHEEL_DELTA_WPARAM(wParam); // read wheel distance traveled
-                float fZoomRatio = i16Delta / WHEEL_DELTA; // to normalize the data we need to divide by the multiplier
+                int16_t i16Delta{GET_WHEEL_DELTA_WPARAM(wParam)}; // read wheel distance traveled
+                float fZoomRatio{static_cast<float>(i16Delta) / WHEEL_DELTA}; // to normalize the data we need to divide by the multiplier
                 oApp.m_oRenderer.zoom(fZoomRatio);
             }
             break;
@@ -182,10 +182,9 @@ int CApp::updateMessageQueue()
 
 Err CApp::loadFile()
 {
-    Err retVal{Err::NoError};
     CStlLoader oStlLoader;
 
-    retVal = oStlLoader.loadFile(m_sInputFileName, m_oModel);
+    Err retVal{oStlLoader.loadFile(m_sInputFileName, m_oModel)};
     if (Err::NoError == retVal)
     {
         m_oModel.normalizeModel();
@@ -306,11 +305,17 @@ void CApp::handleLMBPressed(int iMouseX, int iMouseY)
         logPrint(Debug) << "LMB continue: " << iMouseX << "," << iMouseY;
         // left-right mouse movement rotates the object around the Y-axis
         // up-down mouse movement rotates the object around the X-axis
-        constexpr float fRotAngleUnit = 0.3f*2.0f*M_PI/360.0f; // 0.3 degree per mouse position unit
-        float fAngleY = -fRotAngleUnit*(iMouseX - m_iLmbDragMouseStartPosX); // positive mouse X change causes rotation by negative angle around Y axis
-        float fAngleX = fRotAngleUnit*(iMouseY - m_iLmbDragMouseStartPosY) * -1.0f; // the value is negated because mouse Y-coordinate is flipped comparing to GL's Y-coordinate
-        m_oRenderer.rotateX(fAngleX);
-        m_oRenderer.rotateY(fAngleY);
+        constexpr float fRotAngleUnit{0.6f*2.0f*M_PI/360.0f/2.0f}; // 0.6 degree per mouse position unit
+        if (iMouseX != m_iLmbDragMouseStartPosX)
+        {
+            float fAngleY{-fRotAngleUnit*(iMouseX - m_iLmbDragMouseStartPosX)}; // positive mouse X change causes rotation by negative angle around Y axis
+            m_oRenderer.rotateY(fAngleY);
+        }
+        if (iMouseY != m_iLmbDragMouseStartPosY)
+        {
+            float fAngleX{fRotAngleUnit*(iMouseY - m_iLmbDragMouseStartPosY) * -1.0f}; // the value is negated because mouse Y-coordinate is flipped comparing to GL's Y-coordinate
+            m_oRenderer.rotateX(fAngleX);
+        }
     }
 
     m_iLmbDragMouseStartPosX = iMouseX;
@@ -336,9 +341,12 @@ void CApp::handleMMBPressed(int iMouseX, int iMouseY)
     else
     {
         logPrint(Debug) << "MMB continue: " << iMouseX << "," << iMouseY;
-        constexpr float fRotAngleUnit = 0.3f*2.0f*M_PI/360.0f; // 0.3 degree per mouse position unit
-        float fAngleZ = fRotAngleUnit*(iMouseX - m_iMmbDragMouseStartPosX);
-        m_oRenderer.rotateZ(fAngleZ);
+        if (iMouseX != m_iMmbDragMouseStartPosX)
+        {
+            constexpr float fRotAngleUnit{0.6f*2.0f*M_PI/360.0f/2.0f}; // 0.6 degree per mouse position unit
+            float fAngleZ{fRotAngleUnit*(iMouseX - m_iMmbDragMouseStartPosX)};
+            m_oRenderer.rotateZ(fAngleZ);
+        }
     }
 
     m_iMmbDragMouseStartPosX = iMouseX;
@@ -364,8 +372,8 @@ void CApp::handleRMBPressed(int iMouseX, int iMouseY)
     else
     {
         logPrint(Debug) << "RMB continue: " << iMouseX << "," << iMouseY;
-        int iViewPosX = iMouseX - m_iRmbDragMouseStartPosX;
-        int iViewPosY = (iMouseY - m_iRmbDragMouseStartPosY) * -1; // the value is negated because mouse Y-coordinate is flipped comparing to GL's Y-coordinate
+        int iViewPosX{iMouseX - m_iRmbDragMouseStartPosX};
+        int iViewPosY{(iMouseY - m_iRmbDragMouseStartPosY) * -1}; // the value is negated because mouse Y-coordinate is flipped comparing to GL's Y-coordinate
         m_oRenderer.moveViewPos(iViewPosX, iViewPosY);
     }
     m_iRmbDragMouseStartPosX = iMouseX;

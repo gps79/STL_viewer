@@ -1,0 +1,7 @@
+<map id="CRenderer::resetViewState" name="CRenderer::resetViewState">
+<area shape="rect" id="Node000001" title="Resets the view state of the renderer." alt="" coords="5,14,205,42"/>
+<area shape="rect" id="Node000002" href="$class_c_renderer.html#a67453597cfd1ea066afca543fc36cb1e" title="Converts STL model to OpenGL coordinate system." alt="" coords="253,5,473,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,25,237,25,237,30,205,30"/>
+<area shape="rect" id="Node000003" href="$class_c_renderer.html#aff8e6ba02a95f74edaec149e2f36dc3c" title="Rotates the model view orientation around the X&#45;axis." alt="" coords="521,14,668,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="473,25,506,25,506,30,473,30"/>
+</map>

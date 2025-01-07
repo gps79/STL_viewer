@@ -6,6 +6,7 @@ var class_c_renderer =
       [ "filledWires", "class_c_renderer.html#ab0a07aa5f4183f3627ee5182b9efeb08ad72825041b5ce96b372e722cdf3782a4", null ]
     ] ],
     [ "clearScreen", "class_c_renderer.html#aca31ac0bcfc15cd2c2ef65e24c889563", null ],
+    [ "convertCoordinateSystem", "class_c_renderer.html#a67453597cfd1ea066afca543fc36cb1e", null ],
     [ "createRenderContext", "class_c_renderer.html#a0dd8b5bfe27f316bd497ee7036753cf7", null ],
     [ "createWindow", "class_c_renderer.html#acf1254960b15fd0d36530c73f1f94ea6", null ],
     [ "destroy", "class_c_renderer.html#ab196e6af463395497a91d06b8788e78d", null ],

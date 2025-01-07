@@ -122,11 +122,11 @@ Collaboration diagram for CRenderer:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_renderer__coll__graph.png" border="0" usemap="#a_c_renderer_coll__map" alt="Collaboration graph"/></div>
 <map name="a_c_renderer_coll__map" id="a_c_renderer_coll__map">
-<area shape="rect" title="Handles rendering of the 3D model in the OpenGL context." alt="" coords="88,302,332,1198"/>
+<area shape="rect" title="Handles rendering of the 3D model in the OpenGL context." alt="" coords="88,302,332,1220"/>
 <area shape="rect" href="class_c_fps_counter.html" title="A class to calculate and track the frames per second (FPS) of the application." alt="" coords="5,55,207,188"/>
-<area shape="poly" title=" " alt="" coords="119,187,136,285,130,286,114,188"/>
+<area shape="poly" title=" " alt="" coords="119,187,135,285,130,286,114,188"/>
 <area shape="rect" href="class_c_quaternion.html" title="Represents a quaternion for 3D rotations." alt="" coords="231,5,397,237"/>
-<area shape="poly" title=" " alt="" coords="298,238,290,286,284,285,292,237"/>
+<area shape="poly" title=" " alt="" coords="298,238,290,286,285,285,293,237"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -171,6 +171,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae873687ab450c1e2141948ee9e62ef52" id="r_ae873687ab450c1e2141948ee9e62ef52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae873687ab450c1e2141948ee9e62ef52">setNextSkipTrianglesMode</a> ()</td></tr>
 <tr class="memdesc:ae873687ab450c1e2141948ee9e62ef52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjusts the number of triangles to skip during rendering.  <br /></td></tr>
 <tr class="separator:ae873687ab450c1e2141948ee9e62ef52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67453597cfd1ea066afca543fc36cb1e" id="r_a67453597cfd1ea066afca543fc36cb1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67453597cfd1ea066afca543fc36cb1e">convertCoordinateSystem</a> ()</td></tr>
+<tr class="memdesc:a67453597cfd1ea066afca543fc36cb1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts STL model to OpenGL coordinate system.  <br /></td></tr>
+<tr class="separator:a67453597cfd1ea066afca543fc36cb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8e6ba02a95f74edaec149e2f36dc3c" id="r_aff8e6ba02a95f74edaec149e2f36dc3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8e6ba02a95f74edaec149e2f36dc3c">rotateX</a> (float fAngle)</td></tr>
 <tr class="memdesc:aff8e6ba02a95f74edaec149e2f36dc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the model view orientation around the X-axis.  <br /></td></tr>
 <tr class="separator:aff8e6ba02a95f74edaec149e2f36dc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,6 +314,36 @@ Private Attributes</h2></td></tr>
 
 <p>Clears the screen with a specified color. </p>
 <p>This function clears the color buffer and the depth buffer to prepare for the next frame rendering. </p>
+
+</div>
+</div>
+<a id="a67453597cfd1ea066afca543fc36cb1e" name="a67453597cfd1ea066afca543fc36cb1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67453597cfd1ea066afca543fc36cb1e">&#9670;&#160;</a></span>convertCoordinateSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRenderer::convertCoordinateSystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts STL model to OpenGL coordinate system. </p>
+<p>This function applies initial quaternion 90 degrees rotation around X-axis to convert 3D coordinate system from the STL model (Z-axis pointing to the top) to the OpenGL model (Z-axis is pointing to the back) </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_renderer_a67453597cfd1ea066afca543fc36cb1e_cgraph.png" border="0" usemap="#aclass_c_renderer_a67453597cfd1ea066afca543fc36cb1e_cgraph" alt=""/></div>
+<map name="aclass_c_renderer_a67453597cfd1ea066afca543fc36cb1e_cgraph" id="aclass_c_renderer_a67453597cfd1ea066afca543fc36cb1e_cgraph">
+<area shape="rect" title="Converts STL model to OpenGL coordinate system." alt="" coords="5,5,226,50"/>
+<area shape="rect" href="class_c_renderer.html#aff8e6ba02a95f74edaec149e2f36dc3c" title="Rotates the model view orientation around the X&#45;axis." alt="" coords="274,14,421,42"/>
+<area shape="poly" title=" " alt="" coords="226,25,258,25,258,30,226,30"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -554,11 +587,15 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_renderer_aa4191248f37feeafc5c0d4f7b3302aa8_cgraph.png" border="0" usemap="#aclass_c_renderer_aa4191248f37feeafc5c0d4f7b3302aa8_cgraph" alt=""/></div>
 <map name="aclass_c_renderer_aa4191248f37feeafc5c0d4f7b3302aa8_cgraph" id="aclass_c_renderer_aa4191248f37feeafc5c0d4f7b3302aa8_cgraph">
-<area shape="rect" title="Initializes the renderer and creates the window." alt="" coords="5,32,125,60"/>
-<area shape="rect" href="class_c_renderer.html#a0dd8b5bfe27f316bd497ee7036753cf7" title="Creates the OpenGL rendering context." alt="" coords="173,5,413,33"/>
-<area shape="poly" title=" " alt="" coords="125,36,157,32,157,38,125,42"/>
-<area shape="rect" href="class_c_renderer.html#acf1254960b15fd0d36530c73f1f94ea6" title="Creates the rendering window." alt="" coords="195,57,391,85"/>
-<area shape="poly" title=" " alt="" coords="125,50,180,56,179,61,125,55"/>
+<area shape="rect" title="Initializes the renderer and creates the window." alt="" coords="5,74,125,102"/>
+<area shape="rect" href="class_c_renderer.html#a67453597cfd1ea066afca543fc36cb1e" title="Converts STL model to OpenGL coordinate system." alt="" coords="183,5,403,50"/>
+<area shape="poly" title=" " alt="" coords="120,71,190,52,192,57,121,76"/>
+<area shape="rect" href="class_c_renderer.html#a0dd8b5bfe27f316bd497ee7036753cf7" title="Creates the OpenGL rendering context." alt="" coords="173,74,413,102"/>
+<area shape="poly" title=" " alt="" coords="125,85,157,85,157,90,125,90"/>
+<area shape="rect" href="class_c_renderer.html#acf1254960b15fd0d36530c73f1f94ea6" title="Creates the rendering window." alt="" coords="195,126,391,154"/>
+<area shape="poly" title=" " alt="" coords="125,99,173,110,213,119,211,125,172,116,124,104"/>
+<area shape="rect" href="class_c_renderer.html#aff8e6ba02a95f74edaec149e2f36dc3c" title="Rotates the model view orientation around the X&#45;axis." alt="" coords="461,14,608,42"/>
+<area shape="poly" title=" " alt="" coords="404,25,445,25,445,30,404,30"/>
 </map>
 </div>
 
@@ -674,6 +711,18 @@ Here is the call graph for this function:</div>
 
 <p>Resets the view state of the renderer. </p>
 <p>This function initializes the view, position, zoom, and frame settings. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_renderer_aedb1b30fe7db5f546e7b6535a0a6b385_cgraph.png" border="0" usemap="#aclass_c_renderer_aedb1b30fe7db5f546e7b6535a0a6b385_cgraph" alt=""/></div>
+<map name="aclass_c_renderer_aedb1b30fe7db5f546e7b6535a0a6b385_cgraph" id="aclass_c_renderer_aedb1b30fe7db5f546e7b6535a0a6b385_cgraph">
+<area shape="rect" title="Resets the view state of the renderer." alt="" coords="5,14,205,42"/>
+<area shape="rect" href="class_c_renderer.html#a67453597cfd1ea066afca543fc36cb1e" title="Converts STL model to OpenGL coordinate system." alt="" coords="253,5,473,50"/>
+<area shape="poly" title=" " alt="" coords="205,25,237,25,237,30,205,30"/>
+<area shape="rect" href="class_c_renderer.html#aff8e6ba02a95f74edaec149e2f36dc3c" title="Rotates the model view orientation around the X&#45;axis." alt="" coords="521,14,668,42"/>
+<area shape="poly" title=" " alt="" coords="473,25,506,25,506,30,473,30"/>
+</map>
+</div>
 
 </div>
 </div>

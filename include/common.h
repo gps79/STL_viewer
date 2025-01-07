@@ -8,6 +8,8 @@
 #ifndef STL_VIEWER_COMMON_H_INCLUDED
 #define STL_VIEWER_COMMON_H_INCLUDED
 
+#define APP_VERSION "v0.1.0"
+
 #include <algorithm>
 #include <cctype>
 
@@ -56,6 +58,7 @@ enum class Err : int
     StlConvertToFloat
 };
 
+static constexpr float M_PI{3.14159265358979323846}; ///< Constant for the value of Pi.
 
 /**
  * @brief Converts a container of characters to lowercase.

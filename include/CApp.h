@@ -242,8 +242,6 @@ private:
     int m_iMmbDragMouseStartPosY{0}; ///< Starting position of middle mouse button drag (Y-axis).
     int m_iRmbDragMouseStartPosX{0}; ///< Starting position of right mouse button drag (X-axis).
     int m_iRmbDragMouseStartPosY{0}; ///< Starting position of right mouse button drag (Y-axis).
-
-    static constexpr float M_PI{3.14159265358979323846}; ///< Constant for the value of Pi.
 };
 
 #endif // STL_VIEWER_CAPP_H_INCLUDED

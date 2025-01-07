@@ -42,7 +42,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
     CLogger::enableEchoToCout();          // print all logs also on the STDOUT
     logPrint(Info) << "Application start";
 
-    CApp &oApp = CApp::getInstance();
+    CApp &oApp{CApp::getInstance()};
     retVal = oApp.getCmdLineArguments();
     if (Err::NoError == retVal)
     {

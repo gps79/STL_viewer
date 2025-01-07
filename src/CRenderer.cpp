@@ -15,9 +15,7 @@ using namespace std::literals::string_literals;
 
 Err CRenderer::init(WNDPROC pMsgHandler)
 {
-    Err retVal{Err::NoError};
-
-    retVal = createWindow(pMsgHandler);
+    Err retVal{createWindow(pMsgHandler)};
     if (Err::NoError == retVal)
     {
         retVal = createRenderContext();
@@ -27,7 +25,7 @@ Err CRenderer::init(WNDPROC pMsgHandler)
             char dummyArg[]{""};
             char *argv[]{dummyArg};
             glutInit(&argc, argv);
-            GLenum glErr = glGetError();
+            GLenum glErr{glGetError()};
             if (GL_NO_ERROR != glErr)
             {
                 logPrint(Error) << "OpenGL error:" << glErr;
@@ -35,10 +33,12 @@ Err CRenderer::init(WNDPROC pMsgHandler)
             }
             else
             {
+                convertCoordinateSystem();
                 logPrint(Info) << "OpenGL version: " << glGetString(GL_VERSION);
             }
         }
     }
+
     return retVal;
 }
 
@@ -58,25 +58,25 @@ Err CRenderer::createWindow(WNDPROC pMsgHandler)
 	constexpr int iInitialWindowWidth{800};
 	constexpr int iInitialWindowHeight{600};
 	constexpr const CHAR *szClassName{"GP"};
-	constexpr const CHAR *szTitle{"STL viewer (c) Grzegorz Pietrusiak"};
-	constexpr DWORD dwWindowStyle{WS_VISIBLE|WS_OVERLAPPEDWINDOW|WS_CLIPCHILDREN|WS_CLIPSIBLINGS};
+	constexpr const CHAR *szTitle{"STL viewer " APP_VERSION " \xA9 2025 Grzegorz Pietrusiak"};
+	constexpr DWORD dwWindowStyle{WS_VISIBLE | WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN | WS_CLIPSIBLINGS};
 
     logPrint(Trace) << "createWindow";
-    HINSTANCE hInstance = GetModuleHandle(nullptr); // currently running EXE instance
+    HINSTANCE hInstance{GetModuleHandle(nullptr)}; // currently running EXE instance
 	if (hInstance)
 	{
         WNDCLASS  wndClass{}; // init the structure with zeros first
         wndClass.style         = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
-        wndClass.lpfnWndProc   = (WNDPROC)pMsgHandler;
+        wndClass.lpfnWndProc   = pMsgHandler;
         wndClass.hInstance     = hInstance;
         wndClass.lpszClassName = szClassName;
-        wndClass.hCursor       = LoadCursor (nullptr, IDC_ARROW);
+        wndClass.hCursor       = LoadCursor(nullptr, IDC_ARROW);
         if (RegisterClass(&wndClass))
         {
-            const int iScreenWidth = GetSystemMetrics(SM_CXSCREEN);
-            const int iScreenHeight = GetSystemMetrics(SM_CYSCREEN);
-            int iInitialWindowPosX = (iScreenWidth-iInitialWindowWidth)/2;
-            int iInitialWindowPosY = (iScreenHeight-iInitialWindowHeight)/2;
+            const int iScreenWidth{GetSystemMetrics(SM_CXSCREEN)};
+            const int iScreenHeight{GetSystemMetrics(SM_CYSCREEN)};
+            const int iInitialWindowPosX{(iScreenWidth - iInitialWindowWidth) / 2};
+            const int iInitialWindowPosY{(iScreenHeight - iInitialWindowHeight) / 2};
             m_hWindowHandle = CreateWindow(szClassName, szTitle, dwWindowStyle, iInitialWindowPosX, iInitialWindowPosY, iInitialWindowWidth, iInitialWindowHeight, nullptr, nullptr, hInstance, nullptr);
             if (!m_hWindowHandle)
             {
@@ -117,7 +117,7 @@ Err CRenderer::createRenderContext()
         pfd.cColorBits = 24;
         pfd.cDepthBits = 24;
 
-        int iPixelFormat = ChoosePixelFormat(m_hDeviceContext, &pfd);
+        const int iPixelFormat{ChoosePixelFormat(m_hDeviceContext, &pfd)};
         if (iPixelFormat)
         {
             if (SetPixelFormat(m_hDeviceContext, iPixelFormat, &pfd))
@@ -179,18 +179,18 @@ Err CRenderer::redrawWindow(const CModel &oModel)
     if ((m_iWidth > 0) && (m_iHeight > 0))
     {
         // draw 3D object
-        constexpr double dCameraViewAngle = 40.0;
-        const double dAspectRatio = static_cast<double>(m_iWidth) / static_cast<double>(m_iHeight);
-        constexpr float dNearZSceneClipping = 0.1;
-        constexpr float dFarZSceneClipping = 400.0;
+        constexpr double dCameraViewAngle{40.0};
+        const double dAspectRatio{static_cast<double>(m_iWidth) / static_cast<double>(m_iHeight)};
+        constexpr double dNearZClippingPlane{0.1};
+        constexpr double dFarZClippingPlane{400.0};
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        gluPerspective(dCameraViewAngle, dAspectRatio, dNearZSceneClipping, dFarZSceneClipping);
+        gluPerspective(dCameraViewAngle, dAspectRatio, dNearZClippingPlane, dFarZClippingPlane);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
         clearScreen();
         glEnable(GL_DEPTH_TEST);
-        glPolygonOffset(1.0f, 2); // used for wireframes; see http://www.cs.rit.edu/~ncs/Courses/570/UserGuide/OpenGLonWin-14.html
+        glPolygonOffset(1.0f, 2.0f); // used for wireframes; see http://www.cs.rit.edu/~ncs/Courses/570/UserGuide/OpenGLonWin-14.html
         drawObject(oModel);
 
         // draw 2D part of the screen
@@ -209,7 +209,7 @@ Err CRenderer::redrawWindow(const CModel &oModel)
     }
 #ifdef DEBUG
     // (Only in DEBUG build) once a frame check for OpenGL errors. Application is stopped if any OpenGL error occurs.
-    GLenum glErr = glGetError();
+    GLenum glErr{glGetError()};
     if (GL_NO_ERROR != glErr)
     {
         logPrint(Error) << "OpenGL error:" << glErr;
@@ -238,30 +238,30 @@ void CRenderer::drawObject(const CModel &oModel)
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
             glEnable(GL_LIGHTING); //Enable lighting
             // 1. ambient light
-            GLfloat afAmbientColor[] = {1.0f, 1.0f, 1.0f, 1.0f}; // ambient color RGBA
+            constexpr GLfloat afAmbientColor[]{1.0f, 1.0f, 1.0f, 1.0f}; // ambient color RGBA
             glLightModelfv(GL_LIGHT_MODEL_AMBIENT, afAmbientColor);
 
             // 2. Add positioned light
             glEnable(GL_LIGHT0); //Enable light #0
             glEnable(GL_NORMALIZE); //Automatically normalize normals
             // material properties
-            GLfloat afAmbient[] = {0.25f, 0.148f, 0.06475f, 1.0f};
+            constexpr GLfloat afAmbient[]{0.25f, 0.148f, 0.06475f, 1.0f};
             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, afAmbient);
-            GLfloat afDiffuse[] = {0.4f, 0.2368f, 0.1036f, 1.0f};
+            constexpr GLfloat afDiffuse[]{0.4f, 0.2368f, 0.1036f, 1.0f};
             glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, afDiffuse);
-            GLfloat afSpecular[] = {0.774597f, 0.458561f, 0.200621f, 1.0f};
+            constexpr GLfloat afSpecular[]{0.774597f, 0.458561f, 0.200621f, 1.0f};
             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, afSpecular);
-            GLfloat afShininess = 10.8f;
+            constexpr GLfloat afShininess{10.8f};
             glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, afShininess);
             glEnable(GL_COLOR_MATERIAL); // enable material properties
             glColorMaterial(GL_FRONT, GL_AMBIENT); // material properties are defined by vertices colors
             break;
     }
 
-    constexpr float fPositionScale = 0.01f;
+    constexpr float fPositionScale{0.01f};
     glTranslatef(fPositionScale*static_cast<float>(m_iViewPosX), fPositionScale*static_cast<float>(m_iViewPosY), m_fZoom);
     glMultMatrixf(m_oModelViewOrientation.toMatrix().data());
-    glRotatef(static_cast<float>(m_iFrame), 0.0f, 1.0f, 0.0f ); // 3D model animation around Y-axis
+    glRotatef(static_cast<float>(m_iFrame), 0.0f, 0.0f, 1.0f); // 3D model animation around model Z-axis (GL Y-axis)
     glScalef(4.0f, 4.0f, 4.0f); // scale whole object to fill in the view
 
     if (m_bAnime)
@@ -289,10 +289,10 @@ void CRenderer::drawObject(const CModel &oModel)
             ++iFacetNum;
             if (iFacetNum % m_u16SkipTriangles) continue;
         }
-        const CVector3d &normal = facet.normal;
-        const CVector3d &p1 = facet.p1;
-        const CVector3d &p2 = facet.p2;
-        const CVector3d &p3 = facet.p3;
+        const CVector3d &normal{facet.normal};
+        const CVector3d &p1{facet.p1};
+        const CVector3d &p2{facet.p2};
+        const CVector3d &p3{facet.p3};
         glBegin(GL_TRIANGLES);
         glNormal3f(normal.m_fX, normal.m_fY, normal.m_fZ);
         glVertex3f(p1.m_fX, p1.m_fY, p1.m_fZ);
@@ -366,6 +366,7 @@ void CRenderer::resetViewState()
     m_iFrame = 0;
     m_u16SkipTriangles = 0;
     m_oModelViewOrientation.reset();
+    convertCoordinateSystem();
 }
 
 void CRenderer::zoom(float fZoomRatio)
@@ -424,6 +425,12 @@ void CRenderer::setNextSkipTrianglesMode()
             break;
     }
     logPrint(Debug) << "setNextSkipTrianglesMode:" << m_u16SkipTriangles;
+}
+
+void CRenderer::convertCoordinateSystem()
+{
+    constexpr float QuaternionAngle90Degrees{(M_PI/2.0f)/2.0f};
+    rotateX(QuaternionAngle90Degrees);
 }
 
 void CRenderer::rotateX(float fAngle)
